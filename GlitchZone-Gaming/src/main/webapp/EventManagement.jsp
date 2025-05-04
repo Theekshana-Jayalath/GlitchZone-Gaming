@@ -7,7 +7,7 @@
   <!-- Include icon library -->
   <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="${pageContext.request.contextPath}/CSS/homePage.css">
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/CSS/EventManagement.css">
+  <link rel="stylesheet" href="./CSS/EventManagement.css">
   <script src="${pageContext.request.contextPath}/JS/homePage.js"></script>
 </head>
 <body>
@@ -25,6 +25,7 @@
         <button><i class="fas fa-search"></i></button>
       </div>
 
+
       <!-- Navigation Links -->
       <div class="nav-links">
         <a href="#">Home</a>
@@ -36,8 +37,43 @@
   </nav>
 
   <div class="new">
-  
-  
+  	<div class="first">
+  		<fieldset>
+  			<legend style="text-align: center;"><b>ADD A NEW TOURNAMENT</b></legend>
+  			<form class="my" name="form" method="post">
+  				<b>Tournament Name : </b><br/>
+  				<input type="text" name="name" placeholder="Tournament Name" autocomplete="off"><br /><br />
+  				<b>Start Date :</b><br/>
+  				<input type="date" name="sdate" ><br/><br/>
+  				<b>End Date :</b><br/>
+  				<input type="date" name="edate" ><br/><br/>
+  				<b>Game Description :</b><br/>
+  				<textarea name="description" rows="4" cols="35" required></textarea><br /><br />
+  				<b>Player Type :</b><br/>
+  				<select name="ptype">
+  					<option value="" selected disabled hidden>-- Select an option --</option>
+  					<option value="solo">Solo</option>
+  					<option value="duo">Duo</option>
+  					<option value="team">Team</option>
+  				</select><br/><br/>
+  				<b>Rewards Type :</b><br/>
+  				<select name="rtype">
+  					<option value="" selected disabled hidden>-- Select an option --</option>
+  					<option value="coins">Coins</option>
+  					<option value="badges">Badges</option>
+  					<option value="skins">Skins</option>
+  					<option value="leaderboard">Leaderboard Boosts</option>
+  				</select><br/><br/>
+  				<b>Entry Fee (if any):</b><br/>
+  				<select name="fee">
+  					<option value="" selected disabled hidden>-- Select an option --</option>
+  					<option value="poins">Poins</option>
+  					<option value="coins">Coins</option>
+  					<option value="free">Free</option>
+  				</select><br/><br/>
+  			</form>
+  		</fieldset>
+  </div>
   </div>
   
   

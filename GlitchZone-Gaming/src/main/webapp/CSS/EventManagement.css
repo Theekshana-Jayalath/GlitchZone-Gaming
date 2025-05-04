@@ -1,5 +1,23 @@
 
  .new {
   width : 100%;
-  height : 100vh;
+  height : 120vh;
+}
+
+.first{
+	 color : #c51873;
+	  background-color: #bbc8fd;
+      padding: 25px 50px 50px 50px;
+      margin : 50px 100px 100px 300px;
+      border-radius: 10px;
+      width: 700px; 
+      height:700px;
+      justify-content: center; 
+}
+
+.my{
+	color: #000040;
+	background-color: #c9c9c9;
+	padding : 50px;
+	justify-content: center; 
 }
