@@ -32,11 +32,11 @@ public class EventInsertServlet extends HttpServlet {
 		
 		if(isTrue == true) {
 			String alertMessage = "Data insert successfull";
-			response.getWriter().println("<script> alert('"+alertMessage+"');window.location.href='success.jsp' </script>");
+			response.getWriter().println("<script> alert('"+alertMessage+"');window.location.href='EventGetAllServlet' </script>");
 			
 		} else {
 			
-			RequestDispatcher dis2 = request.getRequestDispatcher("unsuccess.jsp");
+			RequestDispatcher dis2 = request.getRequestDispatcher("EventUnsuccess.jsp");
 			dis2.forward(request, response);
 		}
 	}

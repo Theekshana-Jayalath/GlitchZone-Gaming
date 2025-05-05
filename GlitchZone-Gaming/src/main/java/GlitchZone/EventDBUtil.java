@@ -19,7 +19,7 @@ public class EventDBUtil {
 					
 					Class.forName("com.mysql.jdbc.Driver");		
 					Connection con = DriverManager.getConnection(url,user,pass);
-					
+					System.out.print("connected:");
 			
 					}catch(Exception e) {
 								System.out.print("Database not connect:");
