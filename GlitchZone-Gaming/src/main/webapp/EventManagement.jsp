@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,9 +9,9 @@
   <link rel="stylesheet" href="./stylesheet.css">
   <!-- Include icon library -->
   <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/CSS/homePage.css">
+  <link rel="stylesheet" href="./CSS/homePage.css">
   <link rel="stylesheet" href="./CSS/EventManagement.css">
-  <script src="${pageContext.request.contextPath}/JS/homePage.js"></script>
+  <script src="./JS/homePage.js"></script>
 </head>
 <body>
 
@@ -40,24 +43,24 @@
   	<div class="first">
   		<fieldset>
   			<legend style="text-align: center;"><b>ADD A NEW TOURNAMENT</b></legend>
-  			<form class="my" name="form" method="post">
+  			<form action="EventInsertServlet" method="post" class="my" >
   				<b>Tournament Name : </b><br/>
   				<input type="text" name="name" placeholder="Tournament Name" autocomplete="off"><br /><br />
   				<b>Start Date :</b><br/>
-  				<input type="date" name="sdate" ><br/><br/>
+  				<input type="date" name="start_date" ><br/><br/>
   				<b>End Date :</b><br/>
-  				<input type="date" name="edate" ><br/><br/>
+  				<input type="date" name="end_date" ><br/><br/>
   				<b>Game Description :</b><br/>
   				<textarea name="description" rows="4" cols="35" required></textarea><br /><br />
   				<b>Player Type :</b><br/>
-  				<select name="ptype">
+  				<select name="player_type">
   					<option value="" selected disabled hidden>-- Select an option --</option>
   					<option value="solo">Solo</option>
   					<option value="duo">Duo</option>
   					<option value="team">Team</option>
   				</select><br/><br/>
   				<b>Rewards Type :</b><br/>
-  				<select name="rtype">
+  				<select name="reward_type">
   					<option value="" selected disabled hidden>-- Select an option --</option>
   					<option value="coins">Coins</option>
   					<option value="badges">Badges</option>
@@ -65,12 +68,24 @@
   					<option value="leaderboard">Leaderboard Boosts</option>
   				</select><br/><br/>
   				<b>Entry Fee (if any):</b><br/>
-  				<select name="fee">
+  				<select name="entry_fee">
   					<option value="" selected disabled hidden>-- Select an option --</option>
   					<option value="poins">Poins</option>
   					<option value="coins">Coins</option>
   					<option value="free">Free</option>
   				</select><br/><br/>
+  				
+  				<div class="fbtn">
+  				
+  							<button id="submitBtn2" type="reset" value="Cancel" onclick="myfunction1()">Reset</button>
+  							<br><br>
+  							
+                            <button id="submitBtn1" type="submit" value="Submit" name="submit" onclick="myfunction()">Submit</button>
+                            
+
+                            
+
+                </div>
   			</form>
   		</fieldset>
   </div>
