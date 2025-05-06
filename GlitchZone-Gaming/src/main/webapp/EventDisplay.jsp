@@ -67,12 +67,12 @@
   			
   			<td>
   				<a href="EventUpdate.jsp?id=${Event.id}&name=${Event.name}&start_date=${Event.start_date}&end_date=${Event.end_date}&description=${Event.description}&player_type=${Event.player_type}&reward_type=${Event.reward_type}&entry_fee=${Event.entry_fee}">
-  					<button>Update</button>
+  					<button class="btn update-btn">Update</button>
   				</a>
   				
   				<form action="EventDeleteServlet" method="post">
   				<input type="hidden" name="id" value="${Event.id}">
-  					<button>Delete</button>
+  					<button class="btn delete-btn">Delete</button>
   				</form>
   			</td>
   		</tr>

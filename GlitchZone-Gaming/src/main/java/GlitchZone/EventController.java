@@ -10,19 +10,20 @@ public class EventController {
 	
 	//connect DB
 	private static boolean isSuccess;
-	private static Connection con = null;
-	private static Statement stmt = null;
-	private static ResultSet rs = null;
+	private static Connection con ;
+	private static Statement stmt ;
+	private static ResultSet rs ;
 	
 	//Insert Data Function
 	public static boolean insertdata(String name, String start_date, String end_date, String description, 
 			String player_type, String reward_type, String entry_fee) {
 		 
 		boolean isSuccess = false;
+		System.out.println(name);
 		
 		try {
 			//DB connection call
-			con = EventDBUtil.getConnection();
+			Connection con = EventDBUtil.getConnection(); 
 			stmt = con.createStatement();
 			
 			//SQL Query 
@@ -62,7 +63,7 @@ public class EventController {
 			 rs = stmt.executeQuery(sql);
 			 
 			 while(rs.next()) {
-				 int id = rs.getInt(1);
+				 int tournament_id = rs.getInt(1);
 				 String name = rs.getString(2);
 				 String start_date = rs.getString(3);
 				 String end_date = rs.getString(4);
@@ -71,7 +72,7 @@ public class EventController {
 				 String reward_type = rs.getString(7);
 				 String entry_fee = rs.getString(8);
 				 
-				 EventModel eve = new EventModel(id,name,start_date,end_date,description,player_type,reward_type,entry_fee);
+				 EventModel eve = new EventModel(tournament_id,name,start_date,end_date,description,player_type,reward_type,entry_fee);
 				 Event.add(eve);
 			 }
 			 
@@ -98,7 +99,7 @@ public class EventController {
 			 rs = stmt.executeQuery(sql);
 			 
 			 while(rs.next()) {
-				 int id = rs.getInt(1);
+				 int tournament_id = rs.getInt(1);
 				 String name = rs.getString(2);
 				 String start_date = rs.getString(3);
 				 String end_date = rs.getString(4);
@@ -107,7 +108,7 @@ public class EventController {
 				 String reward_type = rs.getString(7);
 				 String entry_fee = rs.getString(8);
 				 
-				 EventModel eve = new EventModel(id,name,start_date,end_date,description,player_type,reward_type,entry_fee);
+				 EventModel eve = new EventModel(tournament_id,name,start_date,end_date,description,player_type,reward_type,entry_fee);
 				 Event.add(eve);
 			 }
 			 
@@ -119,7 +120,7 @@ public class EventController {
 	}
 	
 	//Update data
-	public static boolean updatedata(String id,String name,String start_date,String end_date,String description,String player_type,String reward_type,String entry_fee) {
+	public static boolean updatedata(String tournament_id,String name,String start_date,String end_date,String description,String player_type,String reward_type,String entry_fee) {
 		
 		try {
 			 //DB Connection
@@ -128,7 +129,7 @@ public class EventController {
 			 
 			 //SQL Query
 			 String sql = "update tournaments set name='"+name+"', start_date='"+start_date+"',end_date='"+end_date+"',description='"+description+"',player_type='"+player_type+"',reward_type='"+reward_type+"',entry_fee='"+entry_fee+"'"
-			 		+ "where id='"+id+"'";
+			 		+ "where id='"+tournament_id+"'";
 			 
 			 int rs = stmt.executeUpdate(sql);
 			 
@@ -147,8 +148,8 @@ public class EventController {
 	}
 
 	//Delete data
-	public static boolean deletedata(String id) {
-		int convID = Integer.parseInt(id);
+	public static boolean deletedata(String tournament_id) {
+		int convID = Integer.parseInt(tournament_id);
 		
 		try {
 			 //DB Connection
