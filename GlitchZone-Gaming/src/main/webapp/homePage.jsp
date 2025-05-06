@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +9,8 @@
   <link rel="stylesheet" href="./stylesheet.css">
   <!-- Include icon library -->
   <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/CSS/homePage.css">
-  <script src="${pageContext.request.contextPath}/JS/homePage.js"></script>
+  <link rel="stylesheet" href="./CSS/homePage.css">
+  <script src="./JS/homePage.js"></script>
 </head>
 <body>
   <!-- Navigation Bar -->
