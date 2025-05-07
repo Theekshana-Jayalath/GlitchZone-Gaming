@@ -2,6 +2,7 @@ package GlitchZone;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 
 public class EventDBUtil {
@@ -13,12 +14,12 @@ public class EventDBUtil {
 			private static Connection con;
 				
 			public static Connection getConnection() {
-				
+			Connection con = null;
 						
 				try {
 					
 					Class.forName("com.mysql.jdbc.Driver");		
-					Connection con = DriverManager.getConnection(url,user,pass);
+					
 					System.out.println("connected:");
 			
 					}catch(Exception e) {
@@ -26,7 +27,20 @@ public class EventDBUtil {
 							}
 				return con;
 			}
-
+	
+			
 	}
+
+
+
+
+/*public static void main(String[] args) throws ClassNotFoundException, SQLException{
+	
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/game","root","1234");
+		System.out.println("Database connected");
+}*/
+
 
 
