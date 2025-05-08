@@ -1,3 +1,5 @@
+
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
@@ -29,7 +31,7 @@
       <!-- Navigation Links -->
       <div class="nav-links">
         <a href="#">Home</a>
-        <a href="#">Games</a>
+        <a href="Gameswall.jsp">Games</a>
         <a href="#">Community</a>
         <a href="#">Login</a>
       </div>

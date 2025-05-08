@@ -22,9 +22,12 @@ public class EventDeleteServlet extends HttpServlet {
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String id = request.getParameter("id");
+		String tournament_id = request.getParameter("tournament_id");
+		
+
+		
 		boolean isTrue;
-		isTrue = EventController.deletedata(id);
+		isTrue = EventController.deletedata(tournament_id);
 		
 		if(isTrue == true) {
 			String alertMessage = "Data Delete successfull";
@@ -32,7 +35,7 @@ public class EventDeleteServlet extends HttpServlet {
 			
 		} else {
 			
-			List<EventModel> eventDetails = EventController.getById(id);
+			List<EventModel> eventDetails = EventController.getById(tournament_id);
 			request.setAttribute("eventDetails", eventDetails);
 			
 			RequestDispatcher dispatcher = request.getRequestDispatcher("EventUnsuccess.jsp");
@@ -40,4 +43,8 @@ public class EventDeleteServlet extends HttpServlet {
 		}
 	}
 
+
 }
+
+
+

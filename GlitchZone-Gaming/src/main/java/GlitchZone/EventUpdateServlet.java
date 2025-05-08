@@ -20,7 +20,7 @@ public class EventUpdateServlet extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String id = request.getParameter("id");
+		String tournament_id = request.getParameter("id");
 		String name = request.getParameter("name");
 		String start_date = request.getParameter("start_date");
 		String end_date = request.getParameter("end_date");
@@ -29,11 +29,12 @@ public class EventUpdateServlet extends HttpServlet {
 		String reward_type = request.getParameter("reward_type");
 		String entry_fee = request.getParameter("entry_fee");
 		
+		System.out.println(tournament_id);
 		boolean isTrue;
-		isTrue = EventController.updatedata(entry_fee, name, start_date, end_date, description, player_type, reward_type, entry_fee);
+		isTrue = EventController.updatedata(tournament_id,name, start_date, end_date, description, player_type, reward_type, entry_fee);
 		
 		if(isTrue == true) {
-			List<EventModel> eventDetails = EventController.getById(id);
+			List<EventModel> eventDetails = EventController.getById(tournament_id);
 			request.setAttribute("eventDetails", eventDetails);
 			
 			String alertMessage = "Data Update successfull";
@@ -47,4 +48,7 @@ public class EventUpdateServlet extends HttpServlet {
 		
 	}
 
+
 }
+
+

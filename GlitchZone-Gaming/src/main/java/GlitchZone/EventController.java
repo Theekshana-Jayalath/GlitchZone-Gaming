@@ -127,10 +127,10 @@ public class EventController {
 			 //DB Connection
 			 con = EventDBUtil.getConnection();
 			 stmt = con.createStatement();
-			 
+			 System.out.println(tournament_id);
 			 //SQL Query
 			 String sql = "update tournaments set name='"+name+"', start_date='"+start_date+"',end_date='"+end_date+"',description='"+description+"',player_type='"+player_type+"',reward_type='"+reward_type+"',entry_fee='"+entry_fee+"'"
-			 		+ "where id='"+tournament_id+"'";
+			 		+ "where tournament_id='"+tournament_id+"'";
 			 
 			 int rs = stmt.executeUpdate(sql);
 			 
@@ -152,13 +152,15 @@ public class EventController {
 	public static boolean deletedata(String tournament_id) {
 		int convID = Integer.parseInt(tournament_id);
 		
+		
 		try {
 			 //DB Connection
 			 con = EventDBUtil.getConnection();
 			 stmt = con.createStatement();
-			 String sql = "delete from tournaments where id='"+convID+"'";
+			 String sql = "delete from tournaments where tournament_id='"+convID+"'";
 			 
 			 int rs = stmt.executeUpdate(sql);
+
 			 
 			 if(rs > 0) {
 					isSuccess = true;
@@ -173,6 +175,8 @@ public class EventController {
 		
 		return isSuccess;
 	}
-	
-	
 }
+	
+	
+
+

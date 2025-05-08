@@ -3,8 +3,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+ <meta charset="UTF-8">
+  <title>GlitchZone-Gaming</title>
+  <link rel="stylesheet" href="./stylesheet.css">
+  <!-- Include icon library -->
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="./CSS/homePage.css">
+  <link rel="stylesheet" href="./CSS/EventManagement.css">
+  <script src="./JS/homePage.js"></script>
 </head>
 <body>
 <%

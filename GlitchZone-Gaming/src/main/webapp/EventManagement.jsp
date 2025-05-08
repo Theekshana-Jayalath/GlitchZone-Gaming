@@ -32,7 +32,7 @@
       <!-- Navigation Links -->
       <div class="nav-links">
         <a href="#">Home</a>
-        <a href="#">Games</a>
+        <a href="Gameswall.jsp">Games</a>
         <a href="#">Community</a>
         <a href="#">Login</a>
       </div>
@@ -80,6 +80,7 @@
   							  <button id="submitBtn2" type="reset" value="Reset" name="reset" onclick="myfunction()">Reset</button>
                             <button id="submitBtn1" type="submit" value="Submit" name="submit" onclick="myfunction()">Submit</button>
                        
+                            
                 </div>
   			</form>
   		</fieldset>
