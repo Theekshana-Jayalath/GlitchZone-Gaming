@@ -1,28 +1,33 @@
 @charset "UTF-8";
 
-.main-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    padding: 40px;
-    width: 90%;
-    max-width: 1400px;
+
+  .main-container{
+  	display: grid;
+    /*grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-rows: repeat(6, 100px);  /* 2 rows, 300px height */
+    gap: 20px;
+    padding: 25px;
+    margin: 0 80 0 80 ;
+    box-sizing: border-box;
   }
   
-  .box {
-    background: #1a1a2e;
-    border-radius: 16px;
-    padding: 40px;
-    font-size: 1.8rem;
-    font-weight: bold;
+  .box{
+  background-color: #f0f0f09f;
+    border-radius: 12px;
+    color: #000;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 30px;
     text-align: center;
-    transition: transform 0.3s ease, background 0.3s ease;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  }
+    font-size: 24px;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
   
   .box:hover {
     transform: scale(1.03);
-    background: #2e2e40;
+    background: #518ed2;
     cursor: pointer;
   }
   
