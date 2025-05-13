@@ -45,7 +45,7 @@
     <div class="box">🚀 Upcoming</div>
     <div class="box">👥 Multiplayer</div>
     <div class="box">🎯 Editor’s Pick</div>
-    <div class="box">FeedBack</div>
+    <div class="box"><a href="feedbackCreate.jsp">FeedBack</a></div>
   </div>
   
 </body>

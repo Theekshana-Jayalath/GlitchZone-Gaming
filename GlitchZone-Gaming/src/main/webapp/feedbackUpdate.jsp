@@ -26,8 +26,8 @@
 
       <!-- Navigation Links -->
       <div class="nav-links">
-        <a href="#">Home</a>
-        <a href="#">Games</a>
+        <a href="homePage.jsp">Home</a>
+        <a href="Gameswall.jsp">Games</a>
         <a href="#">Community</a>
         <a href="#">Login</a>
       </div>

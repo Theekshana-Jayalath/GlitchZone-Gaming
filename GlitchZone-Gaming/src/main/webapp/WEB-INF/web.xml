@@ -89,7 +89,47 @@
 		<url-pattern>/feedbackDeleteServlet</url-pattern>
 	</servlet-mapping>
 	
+	<!-- pehesarani -->
 	
+	<servlet>
+     	<servlet-name>mgInsertServlet</servlet-name>
+     	<servlet-class>GlitchZone.mgInsertServlet</servlet-class>
+     </servlet>
+     
+     <servlet-mapping>
+     	<servlet-name>mgInsertServlet</servlet-name>
+     	<url-pattern>/mgInsertServlet</url-pattern>
+     </servlet-mapping>
+     
+     <servlet>
+     	<servlet-name>mgGetAllServlet</servlet-name>
+     	<servlet-class>GlitchZone.mgGetAllServlet</servlet-class>
+     </servlet>
+     
+     <servlet-mapping>
+     	<servlet-name>mgGetAllServlet</servlet-name>
+     	<url-pattern>/mgGetAllServlet</url-pattern>
+     </servlet-mapping>
+     
+    <servlet>
+     	<servlet-name>mgUpdateServlet</servlet-name>
+     	<servlet-class>GlitchZone.mgUpdateServlet</servlet-class>
+     </servlet>
+     
+     <servlet-mapping>
+     	<servlet-name>mgUpdateServlet</servlet-name>
+     	<url-pattern>/mgUpdateServlet</url-pattern>
+     </servlet-mapping>
+    
+    <servlet>
+     	<servlet-name>mgDeleteServlet</servlet-name>
+     	<servlet-class>GlitchZone.mgDeleteServlet</servlet-class>
+     </servlet>
+     
+     <servlet-mapping>
+     	<servlet-name>mgDeleteServlet</servlet-name>
+     	<url-pattern>/mgDeleteServlet</url-pattern>
+     </servlet-mapping>
   
 </web-app>
 </element>
