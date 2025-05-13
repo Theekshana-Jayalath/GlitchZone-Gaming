@@ -39,7 +39,7 @@
     </div>
   </nav>
    <div class="event-container">
-  <div class="event-box">🎮 Tournaments</div>
+  <div class="event-box"><a href="Tournament.jsp">🎮 Tournaments</a></div>
   <div class="event-box">🕐 Time - Limited Challenge </div>
     <div class="event-box">📆 Daily or Weekly Quest</div>
     <div class="event-box">🎉 Seasonal or Festival</div>

@@ -38,17 +38,17 @@
   				<b>End Date :</b><br/>
   				<input type="date" name="end_date" value="<%=end_date%>" ><br/><br/>
   				<b>Game Description :</b><br/>
-  				<textarea name="description" value="<%=description%>"  rows="4" cols="35" required></textarea><br /><br />
+  				<textarea name="description" value="<%=description%>"  rows="4" cols="35" required><%=description%></textarea><br /><br />
   				<b>Player Type :</b><br/>
   				<select name="player_type" value="<%=player_type%>" >
-  					<option value="" selected disabled hidden>-- Select an option --</option>
+  					<option value="<%=player_type%>"><%=player_type%></option>
   					<option value="solo">Solo</option>
   					<option value="duo">Duo</option>
   					<option value="team">Team</option>
   				</select><br/><br/>
   				<b>Rewards Type :</b><br/>
   				<select name="reward_type" value="<%=reward_type%>" >
-  					<option value="" selected disabled hidden>-- Select an option --</option>
+  					<option value="<%=reward_type%>"><%=reward_type%></option>
   					<option value="coins">Coins</option>
   					<option value="badges">Badges</option>
   					<option value="skins">Skins</option>
@@ -56,7 +56,7 @@
   				</select><br/><br/>
   				<b>Entry Fee (if any):</b><br/>
   				<select name="entry_fee" value="<%=entry_fee%>" >
-  					<option value="" selected disabled hidden>-- Select an option --</option>
+  					<option value="<%=entry_fee%>"><%=entry_fee%></option>
   					<option value="poins">Poins</option>
   					<option value="coins">Coins</option>
   					<option value="free">Free</option>
@@ -64,14 +64,8 @@
   				
   				<div class="fbtn">
   				
-  							<button id="submitBtn2" type="reset" value="Cancel" onclick="myfunction1()">Reset</button>
-  							<br><br>
-  							
                             <button id="submitBtn1" type="submit" value="Submit" name="submit" onclick="myfunction()">Submit</button>
                             
-
-                            
-
                 </div>
   			</form>
   		</fieldset>

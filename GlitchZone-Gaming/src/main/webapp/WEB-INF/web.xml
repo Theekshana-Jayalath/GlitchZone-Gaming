@@ -45,6 +45,51 @@
 		<url-pattern>/EventDeleteServlet</url-pattern>
 	</servlet-mapping>
 	
+	
+	<!-- pramudi -->
+	
+	<servlet>
+		<servlet-name>FeedbackInsertServlet</servlet-name>
+		<servlet-class>GlitchZone.FeedbackInsertServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>FeedbackInsertServlet</servlet-name>	
+		<url-pattern>/feedbackInsertServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>feedbackGetAll</servlet-name>
+		<servlet-class>GlitchZone.feedbackGetAll</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>feedbackGetAll</servlet-name>	
+		<url-pattern>/feedbackGetAll</url-pattern>
+	</servlet-mapping>
+	
+	
+		<servlet>
+		<servlet-name>feedbackUpdateServlet</servlet-name>
+		<servlet-class>GlitchZone.feedbackUpdateServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>feedbackUpdateServlet</servlet-name>	
+		<url-pattern>/feedbackUpdateServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>feedbackDeleteServlet</servlet-name>
+		<servlet-class>GlitchZone.feedbackDeleteServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>feedbackDeleteServlet</servlet-name>	
+		<url-pattern>/feedbackDeleteServlet</url-pattern>
+	</servlet-mapping>
+	
+	
   
 </web-app>
 </element>

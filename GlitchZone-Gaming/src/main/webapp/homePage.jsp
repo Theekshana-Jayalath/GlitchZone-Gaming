@@ -45,7 +45,7 @@
     <div class="slideshow-container">
   
       <!-- Slides -->
-      <div class="slide fade"><img src="./images/allPages/B.jpg" /></div>
+      <div class="slide fade"><img src="./images/HP.png" /></div>
       <div class="slide fade"><img src="./images/allPages/B1.jpg" /></div>
       <div class="slide fade"><img src="./images/allPages/B2.jpg" /></div>
   

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+ 
+  .event-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 4 columns */
+    grid-template-rows: repeat(4, 150px);  /* 2 rows, 300px height */
+    gap: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+  }
+  
+  .event-box {
+    background-color: #f0f0f09f;
+    border-radius: 12px;
+    color: #000;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .event-box:hover {
+    transform: scale(1.03);
+    background-color: #62959e;
+  }
