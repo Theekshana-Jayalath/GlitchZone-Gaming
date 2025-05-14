@@ -38,7 +38,7 @@
     </div>
   </nav>
   <div class="main-container">
-    <div class="box">🎮 New Games</div>
+    <div class="box"><a href="mgInsert.jsp">🎮 New Games</a></div>
     <div class="box">⭐ Top Rated</div>
     <div class="box">🔥 Trending Games</div>
     <div class="box"><a href="Event.jsp">📅 Events</a></div>

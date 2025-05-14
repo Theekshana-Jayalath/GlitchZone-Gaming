@@ -1,0 +1,173 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url('../images/HP.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Profile container with fade-in animation */
+.profile-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 450px;
+    animation: fadeInScale 0.8s ease forwards;
+}
+
+/* Heading */
+.profile-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Profile form groups */
+.profile-form .form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.profile-form .form-group label {
+    font-weight: 600;
+    color: #555;
+}
+
+.profile-form .form-group span {
+    color: #222;
+    font-weight: 500;
+   text-align: center;
+
+}
+
+/* Buttons container */
+.action-buttons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* Common button styles */
+.action-buttons button {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    color: white;
+}
+
+/* Update button: blue with hover animation */
+.update-btn {
+    background: linear-gradient(45deg, #1e90ff, #00bfff);
+    animation: pulseBlue 3s infinite;
+}
+
+.update-btn:hover {
+    background: linear-gradient(45deg, #00bfff, #1e90ff);
+    box-shadow: 0 0 15px #00bfff;
+    transform: scale(1.05);
+}
+
+/* Home button: green with hover animation */
+.HomePage-btn {
+    background: linear-gradient(45deg, #28a745, #85e085);
+    animation: pulseGreen 3s infinite;
+}
+
+.HomePage-btn:hover {
+    background: linear-gradient(45deg, #85e085, #28a745);
+    box-shadow: 0 0 15px #85e085;
+    transform: scale(1.05);
+}
+
+/* Logout button: red with hover animation */
+.logout-btn {
+    background: linear-gradient(45deg, #dc3545, #ff6b6b);
+    animation: pulseRed 3s infinite;
+}
+
+.logout-btn:hover {
+    background: linear-gradient(45deg, #ff6b6b, #dc3545);
+    box-shadow: 0 0 15px #ff6b6b;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulseBlue {
+    0%, 100% {
+        box-shadow: 0 0 8px #1e90ff;
+    }
+    50% {
+        box-shadow: 0 0 20px #00bfff;
+    }
+}
+
+@keyframes pulseGreen {
+    0%, 100% {
+        box-shadow: 0 0 8px #28a745;
+    }
+    50% {
+        box-shadow: 0 0 20px #85e085;
+    }
+}
+
+@keyframes pulseRed {
+    0%, 100% {
+        box-shadow: 0 0 8px #dc3545;
+    }
+    50% {
+        box-shadow: 0 0 20px #ff6b6b;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .profile-container {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .action-buttons button {
+        width: 100%;
+    }
+}

@@ -4,6 +4,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
   <display-name>GlitchZone-Gaming</display-name>
   
+  <!-- Tk -->
 	<servlet>
 		<servlet-name>EventInsertServlet</servlet-name>
 		<servlet-class>GlitchZone.EventInsertServlet</servlet-class>
@@ -130,6 +131,71 @@
      	<servlet-name>mgDeleteServlet</servlet-name>
      	<url-pattern>/mgDeleteServlet</url-pattern>
      </servlet-mapping>
+     
+     
+     
+     <!-- nisal -->
+     
+     
+     <servlet>
+		<servlet-name>UserLoginServlet</servlet-name>
+		<servlet-class>GlitchZone.UserLoginServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>UserLoginServlet</servlet-name>
+		<url-pattern>/UserLoginServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UserInsertServlet</servlet-name>
+		<servlet-class>GlitchZone.UserInsertServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>UserInsertServlet</servlet-name>
+		<url-pattern>/UserInsertServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UpdateUserProfileServlet</servlet-name>
+		<servlet-class>GlitchZone.UpdateUserProfileServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>UpdateUserProfileServlet</servlet-name>
+		<url-pattern>/UpdateUserProfileServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UpdateUserProfileViewServlet</servlet-name>
+		<servlet-class>GlitchZone.UpdateUserProfileViewServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>UpdateUserProfileViewServlet</servlet-name>
+		<url-pattern>/UpdateUserProfileViewServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DeleteUserProfileServlet</servlet-name>
+		<servlet-class>GlitchZone.DeleteUserProfileServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>DeleteUserProfileServlet</servlet-name>
+		<url-pattern>/DeleteUserProfileServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ForgotPasswordServlet</servlet-name>
+		<servlet-class>GlitchZone.ForgotPasswordServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ForgotPasswordServlet</servlet-name>
+		<url-pattern>/ForgotPasswordServlet</url-pattern>
+	</servlet-mapping>
   
 </web-app>
 </element>

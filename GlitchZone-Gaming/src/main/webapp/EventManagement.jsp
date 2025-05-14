@@ -6,7 +6,6 @@
 <head>
   <meta charset="UTF-8">
   <title>GlitchZone-Gaming</title>
-  <link rel="stylesheet" href="./stylesheet.css">
   <!-- Include icon library -->
   <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="./CSS/homePage.css">
@@ -57,6 +56,7 @@
   					<option value="" selected disabled hidden>-- Select an option --</option>
   					<option value="solo">Solo</option>
   					<option value="duo">Duo</option>
+  					
   					<option value="team">Team</option>
   				</select><br/><br/>
   				<b>Rewards Type :</b><br/>

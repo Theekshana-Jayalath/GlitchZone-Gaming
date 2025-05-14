@@ -1,0 +1,77 @@
+/* Reset and global styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url('../images/HP.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container for profile form */
+.profile-container {
+    background-color: #02547b;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Heading */
+.profile-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00ecec;
+}
+
+/* Labels and input fields */
+.profile-container label {
+    font-weight: bold;
+    color: #00ecec;
+}
+
+.profile-container input[type="text"],
+.profile-container input[type="email"],
+.profile-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    Background-color: white; 
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Buttons */
+.profile-container input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 150px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 30px;
+}
+
+.profile-container input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Optional: spacing between the two forms */
+.profile-container form + form {
+    margin-top: 15px;
+}

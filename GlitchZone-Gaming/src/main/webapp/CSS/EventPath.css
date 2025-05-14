@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+/* Gameswall css*/
 
   .main-container{
   	display: grid;
@@ -33,7 +34,7 @@
   
   
   
-  
+ /*event.jsp css*/
   
   .event-container {
     display: grid;

@@ -1,0 +1,151 @@
+@charset "UTF-8";
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('../images/HP.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #333;
+    animation: fadeInBody 1.5s ease forwards;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* Fade in animation for body */
+@keyframes fadeInBody {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Heading style */
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fafafa;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    font-size: 2.5rem;
+    animation: fadeInText 2s ease forwards;
+}
+
+/* Fade in animation for heading */
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        letter-spacing: 2px;
+    }
+    to {
+        opacity: 1;
+        letter-spacing: normal;
+    }
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    overflow: hidden;
+    animation: fadeInTable 2s ease forwards;
+}
+
+/* Fade in animation for table */
+@keyframes fadeInTable {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+th, td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+    color: #222;
+}
+
+/* Header row style */
+th {
+    background-color: #4a90e2;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    user-select: none;
+}
+
+/* Last row border fix */
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Hover effect on table rows */
+tbody tr {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: default;
+}
+
+tbody tr:hover {
+    background-color: #e6f0ff;
+    
+}
+
+/* Buttons styling */
+button {
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    margin: 0 5px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(74, 144, 226, 0.4);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    user-select: none;
+}
+
+button:hover {
+    background-color: #357ABD;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(53, 122, 189, 0.6);
+}
+
+/* Link wrapping update button - remove default link styles */
+a {
+    text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    table, th, td {
+        font-size: 85rem;
+    }
+
+    button {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
+}

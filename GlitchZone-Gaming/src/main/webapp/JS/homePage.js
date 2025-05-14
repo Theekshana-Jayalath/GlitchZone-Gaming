@@ -1,4 +1,4 @@
-let slideIndex = 0;
+let slideIndex = 1;
 let slides = document.getElementsByClassName("slide");
 let dots = document.getElementsByClassName("dot");
 let timer;
@@ -11,26 +11,26 @@ function showSlides() {
     dots[i].classList.remove("active");
   }
 
-  slideIndex++;
   if (slideIndex > slides.length) { slideIndex = 1 }
+  if (slideIndex < 1) { slideIndex = slides.length }
 
   slides[slideIndex - 1].classList.add("active");
   dots[slideIndex - 1].classList.add("active");
 
+  slideIndex++;
   timer = setTimeout(showSlides, 4000);
 }
 
 function plusSlides(n) {
   slideIndex += n - 1;
-  if (slideIndex < 0) slideIndex = slides.length - 1;
   clearTimeout(timer);
   showSlides();
 }
 
 function currentSlide(n) {
-  slideIndex = n - 1;
+  slideIndex = n;
   clearTimeout(timer);
   showSlides();
 }
 
-showSlides();
+showSlides(); // 👈 This ensures first slide is shown when the page loads
